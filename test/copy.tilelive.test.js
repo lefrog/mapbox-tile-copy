@@ -360,6 +360,7 @@ test('copy omnivore to Frankfurt', function(t) {
 
   tileliveCopy(src, dst, { maxzoom: 5 }, function(err) {
     t.ifError(err, 'copied');
+    console.log(dst);
     tileCount(dst, function(err, count) {
       t.ifError(err, 'counted tiles');
       t.equal(count, 27, 'expected number of tiles');
